@@ -1,13 +1,13 @@
-import cv2
 import glob
 import urllib
 import re
+import cv2
 import numpy as np
 
 
 def fname_to_name(fname, dirname):
-    fname = re.sub('^' + dirname + '\/', '', fname)
-    fname = re.sub('\.(jpg|png|jpeg)', '', fname)
+    fname = re.sub('^' + dirname + r'\/', '', fname)
+    fname = re.sub(r'\.(jpg|png|jpeg)', '', fname)
     fname = re.sub('-', ' ', fname)
     fname = re.sub('_', '', fname)
     return fname
